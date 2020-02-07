@@ -24,7 +24,7 @@
   <main>
     <img src="img/intro-welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
     <section>
-      <h2>Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
       <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
       <div>
@@ -82,17 +82,38 @@
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <h2>Поиск гостиницы в Седоне</h2>
-      <!-- Здесь будет форма -->
-        <img src="img/calendar.svg" alt="Выберите дату" width="21" height="22">
+      <!-- форма -->
+      <form action="#" method="post">
+        <p>
+          <label for="date-arrival">Дата заезда:</label>
+          <input id="date-arrival" type="date" name="date-arrival" value="2017-04-24">
+        </p>
+        <p>
+          <label for="date-departure">Дата выезда:</label>
+          <input id="date-departure" type="date" name="date-departure" value="2017-07-04">
+        </p>
+        <p>
+          <label for="number-adults">Взрослые:</label>
+          <input id="number-adults" type="number" name="number-adults" value="2">
+        </p>
+        <p>
+          <label for="number-children">Дети:</label>
+          <input id="number-children" type="number" name="number-children" value="0">
+        </p>
+
+        <button type="submit">Найти</button>
+      </form>
     </section>
 
     <section>
       <!-- Здесь будет карта -->
+      <img src="img/sedona-map.png" alt="Карта Седоны" width="1718" height="748">
     </section>
   </main>
 
   <footer>
     <p>#visitsedona</p>
+    <p>тел: +7(495) 666-02-66</p>
     <div>
       <ul>
         <li><a href="#"><img src="img/twitter.svg" alt="Twitter" width="17" height="15"></a></li>
