@@ -26,11 +26,52 @@
     <section>
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
       <!-- форма -->
-      
+      <form method="get" action="#">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input id="filter-infrastructure" type="checkbox" name="filter-infrastructure" checked>
+              <label for="filter-infrastructure">Бассейн</label>
+            </li>
+            <li>
+              <input id="filter-parking" type="checkbox" name="filter-parking">
+              <label for="filter-parking">Парковка</label>
+            </li>
+            <li>
+              <input id="filter-wifi" type="checkbox" name="filter-wifi">
+              <label for="filter-wifi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input id="filter-hotel" type="checkbox" name="filter-hotel" checked>
+              <label for="filter-hotel">Гостиница</label>
+            </li>
+            <li>
+              <input id="filter-motel" type="checkbox" name="filter-motel" checked>
+              <label for="filter-motel">Мотель</label>
+            </li>
+            <li>
+              <input id="filter-aparts" type="checkbox" name="filter-aparts" checked>
+              <label for="filter-aparts">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в стуки(р):</legend>
+<!-- Ползунок с двумя ручками я не знаю, как делать, вроде в CSS такое прикручивается: https://github.com/IonDen/ion.rangeSlider -->
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
 
   <section>
-    <div><!-- Поле сортировки--></div>
+    <div><!-- Поле сортировки. Тоже через плагин, какой-нибудь "table sort JS"--></div>
   </section>
 
     <section>
