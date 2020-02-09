@@ -4,16 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body>
-
+<body class="index">
   <header>
     <a>
       <img src="img/logo-sedona.svg" alt="Логотип" width="140" height="72">
     </a>
-      <nav>
-        <ul>
+      <nav class="nav">
+        <ul class="site-nav">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -21,20 +23,22 @@
         </ul>
       </nav>
   </header>
+
   <main>
     <img src="img/intro-welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
+
     <section>
       <h2 class="visually-hidden">Преимущества</h2>
-      <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
-      <div>
+      <p class="deserve-more">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
+      <p class="five-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+      <div class="advantages-1">
         <h3>Настоящий городок</h3>
-          <p>№1</p>
+          <p>- №1 -</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         <img src="img/sedona-cityview.jpg" alt="Седона" width="800" height="401">
       </div>
 
-      <ul>
+      <ul class="advantages-2">
         <li>
           <img src="img/icon-house.svg" alt="Жилье в Седоне" width="75" height="72">
           <h3>Жилье</h3>
@@ -52,56 +56,57 @@
         </li>
       </ul>
 
-      <div>
+      <div class="advantages-3">
         <img src="img/sedona-mountains.jpg" alt="Седона" width="800" height="400">
         <h3>Там есть Мост дьявола</h3>
-          <p>№2</p>
+          <p>- №2 -</p>
           <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
       </div>
 
-      <ul>
+      <ul class="advantages-4">
         <li>
           <h3>Небольшая площадь</h3>
-          <p>№3</p>
+          <p>- №3 -</p>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
         <li>
           <h3>Красивая дорога</h3>
-          <p>№4</p>
+          <p>- №4 -</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li>
           <h3>Мало туристов</h3>
-          <p>№5</p>
+          <p>- №5 -</p>
           <p>Большинство едет в Гранд каньон и толпится там</p>
         </li>
       </ul>
     </section>
 
     <section>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <h2>Поиск гостиницы в Седоне</h2>
-      <!-- форма -->
-      <form action="#" method="post">
-        <p>
+        <p class="got-interested">Заинтересовались?</p>
+        <p class="choose-date">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </div>
+
+      <a class="open-form-button search-form-button-text" href="#">Поиск гостиницы в Седоне</a>
+      <form action="#" method="post" class="search-form">
+        <p class="search-item">
           <label for="date-arrival">Дата заезда:</label>
           <input id="date-arrival" type="date" name="date-arrival" value="2017-04-24">
         </p>
-        <p>
+        <p class="search-item">
           <label for="date-departure">Дата выезда:</label>
           <input id="date-departure" type="date" name="date-departure" value="2017-07-04">
         </p>
-        <p>
+        <p class="search-item-number">
           <label for="number-adults">Взрослые:</label>
           <input id="number-adults" type="number" name="number-adults" value="2">
         </p>
-        <p>
+        <p class="search-item-number">
           <label for="number-children">Дети:</label>
           <input id="number-children" type="number" name="number-children" value="0">
         </p>
 
-        <button type="submit">Найти</button>
+        <button class="search-form-button search-form-button-text" type="submit">Найти</button>
       </form>
     </section>
 
@@ -111,17 +116,17 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>#visitsedona</p>
     <p>тел: +7(495) 666-02-66</p>
     <div>
-      <ul>
+      <ul class="social-icons">
         <li><a href="#"><img src="img/twitter.svg" alt="Twitter" width="17" height="15"></a></li>
         <li><a href="#"><img src="img/fb-icon.svg" alt="Facebook" width="12" height="22"></a></li>
         <li><a href="#"><img src="img/youtube.svg" alt="Youtube" width="20" height="16"></a></li>
       </ul>
     </div>
-    <p>Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41"></a></p>
+    <p class="academy-link">Website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="115" height="41"></a></p>
   </footer>
 </body>
 
