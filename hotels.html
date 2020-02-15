@@ -26,12 +26,13 @@
 
   <main>
     <section>
+      <img src="img\filter-background.jpg" alt="Фильтр гостиниц" width="1200" height="800">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
       <!-- форма -->
       <form method="get" action="#">
         <fieldset>
-          <legend>Инфраструктура:</legend>
-          <ul>
+          <legend class="filter-hotels-param">Инфраструктура:</legend>
+          <ul class="show-hotels-button-text">
             <li>
               <input id="filter-infrastructure" type="checkbox" name="filter-infrastructure" checked>
               <label for="filter-infrastructure">Бассейн</label>
@@ -48,8 +49,8 @@
         </fieldset>
 
         <fieldset>
-          <legend>Тип жилья:</legend>
-          <ul>
+          <legend class="filter-hotels-param">Тип жилья:</legend>
+          <ul class="show-hotels-button-text">
             <li>
               <input id="filter-hotel" type="checkbox" name="filter-hotel" checked>
               <label for="filter-hotel">Гостиница</label>
@@ -65,15 +66,27 @@
           </ul>
         </fieldset>
         <fieldset>
-          <legend>Стоимость в сутки(р):</legend>
-<!-- Ползунок с двумя ручками https://github.com/IonDen/ion.rangeSlider -->
+          <legend class="filter-hotels-param">Стоимость в сутки(р):</legend>
+<!-- Ползунок с двумя ручками https://github.com/IonDen/ion.rangeSlider
+стиль цифр - .advantages-1,3
+-->
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="show-hotels-button show-hotels-button-text" type="submit">Показать</button>
       </form>
     </section>
 
   <section>
-    <div><!-- Поле сортировки, "table sort JS"--></div>
+    <div><!-- Поле сортировки, "table sort JS"-->
+      <p class="sort-result">Найдено: 3</p>
+      <p class="sort-by">Сортировка:</p>
+<!-- НЗ: добавить к <li>  что-то типа ссылок???
+и треугольники img\icon-up-dir.svg   в разном состоянии-->
+      <ul class="sort-by-param">
+        <li class="sort-by-current">по цене</li>
+        <li>по типу</li>
+        <li>по рейтингу</li>
+      </ul>
+    </div>
   </section>
 
     <section>
