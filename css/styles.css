@@ -376,11 +376,17 @@ ul.sort-by-param li:active {
   background-color: #ffffff;
   width: 100%;
   height: 56px;
+
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-header-logo {
   width: 140px;
   height: 72px;
+
+  position: absolute;
 }
 
 .site-nav {
