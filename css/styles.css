@@ -128,12 +128,23 @@ fieldset {
   color: #333333;
 }
 
-.hotels-rank {
+.hotels-rank-text {
   text-align: center;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: #666666;
+
+  background-color: #f2f2f2;
+  width: 110px;
+  height: 27px;
+}
+
+.hotels-rank {
+  flex-direction: column;
+  display: flex;
+
+
 }
 
 .hotels-seemore-button {
@@ -392,9 +403,7 @@ ul.sort-by-param li:active {
 .site-nav {
   flex-direction: row;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+  margin: 0;
   width: 1200px;
   padding: 0;
 }
@@ -402,7 +411,15 @@ ul.sort-by-param li:active {
 .site-nav li {
   padding-bottom: 16px;
 }
+.site-nav li:first-of-type {
+  padding-left: 75px;
+  padding-right: 140px;
+}
 
+.site-nav li:nth-child(3) {
+  padding-left: 390px;
+  padding-right: 160px;
+}
 .welcome {
   width: 1200px;
   height: 510px;
@@ -537,9 +554,30 @@ width: 200px;
 .hotels-list {
     display: flex;
     flex-direction: column;
-    margin: 0 74px;
+    margin: auto;
+    align-items: flex-start;
+    width: 1056px;
 }
 .hotels-list ul {
   padding: 0;
 margin: 0;
+}
+
+.nav {
+  align-self: flex-end;
+}
+
+.hotels-list-element {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.hotels-short-info {
+  padding-left: 30px;
+  padding-right: 522px;
+}
+
+.stars {
+  align-self: flex-end;
 }
