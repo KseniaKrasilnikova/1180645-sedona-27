@@ -31,62 +31,73 @@
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <!-- форма -->
         <form class="hotels-filter-form" method="get" action="#">
-          <div class="hotels-filter-param">
-            <legend class="filter-hotels-param">Инфраструктура:</legend>
-            <ul class="hotels-filter-text">
-              <li>
-                <label class="check option" for="filter-infrastructure">
-                  <input class="check-input" id="filter-infrastructure" type="checkbox" name="filter-infrastructure" checked>
-                  <span class="check-box"></span>
-                  Бассейн
-                </label>
-              </li>
-              <li>
-                <label class="check option" for="filter-parking">
-                  <input class="check-input" id="filter-parking" type="checkbox" name="filter-parking">
-                  <span class="check-box"></span>Парковка
-                </label>
-              </li>
-              <li>
-                <label class="check option" for="filter-wifi">
-                  <input class="check-input" id="filter-wifi" type="checkbox" name="filter-wifi">
-                  <span class="check-box"></span>Wi-Fi
-                </label>
-              </li>
-            </ul>
+          <div class="sub-container">
+            <div class="hotels-filter-param">
+              <legend class="filter-hotels-param">Инфраструктура:</legend>
+              <ul class="hotels-filter-text">
+                <li>
+                  <label class="check option" for="filter-infrastructure">
+                    <input class="check-input" id="filter-infrastructure" type="checkbox" name="filter-infrastructure" checked>
+                    <span class="check-box"></span>
+                    Бассейн
+                  </label>
+                </li>
+                <li>
+                  <label class="check option" for="filter-parking">
+                    <input class="check-input" id="filter-parking" type="checkbox" name="filter-parking">
+                    <span class="check-box"></span>Парковка
+                  </label>
+                </li>
+                <li>
+                  <label class="check option" for="filter-wifi">
+                    <input class="check-input" id="filter-wifi" type="checkbox" name="filter-wifi">
+                    <span class="check-box"></span>Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hotels-filter-param">
+              <legend class="filter-hotels-param">Тип жилья:</legend>
+              <ul class="hotels-filter-text">
+                <li>
+                  <label class="check option" for="filter-hotel">
+                    <input class="check-input" id="filter-hotel" type="checkbox" name="filter-hotel" checked>
+                    <span class="check-box"></span>Гостиница
+                  </label>
+
+                </li>
+                <li>
+                  <label class="check option" for="filter-motel">
+                    <input class="check-input" id="filter-motel" type="checkbox" name="filter-motel" checked>
+                    <span class="check-box"></span>Мотель
+                  </label>
+
+                </li>
+                <li>
+                  <label class="check option" for="filter-aparts">
+                    <input class="check-input" id="filter-aparts" type="checkbox" name="filter-aparts" checked>
+                    <span class="check-box"></span>Апартаменты
+                  </label>
+
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="hotels-filter-param">
-            <legend class="filter-hotels-param">Тип жилья:</legend>
-            <ul class="hotels-filter-text">
-              <li>
-                <label class="check option" for="filter-hotel">
-                  <input class="check-input" id="filter-hotel" type="checkbox" name="filter-hotel" checked>
-                  <span class="check-box"></span>Гостиница
-               </label>
-
-              </li>
-              <li>
-                <label class="check option" for="filter-motel">
-                  <input class="check-input" id="filter-motel" type="checkbox" name="filter-motel" checked>
-                  <span class="check-box"></span>Мотель
-                </label>
-
-              </li>
-              <li>
-                <label class="check option" for="filter-aparts">
-                  <input class="check-input" id="filter-aparts" type="checkbox" name="filter-aparts" checked>
-                  <span class="check-box"></span>Апартаменты
-              </label>
-
-              </li>
-            </ul>
-          </div>
-          <div class="hotels-filter-param">
-            <legend class="filter-hotels-param">Стоимость в сутки (р):</legend>
-            <!-- Ползунок с двумя ручками https://github.com/IonDen/ion.rangeSlider
-стиль цифр - .advantages
--->
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <!-- стиль цифр - .advantages-->
+            <div class="price-controls">
+              <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="number" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
             <button class="show-hotels-button" type="submit">Показать</button>
           </div>
         </form>
@@ -124,18 +135,27 @@
           <li class="hotels-list-element">
             <div class="hotels-pic">
               <a href="#">
-                <img src="img/amara-resort.jpg" alt="Amara Resort & Spa" width="140" height="90">
+                <img src="img/amara-resort.jpg" alt="Amara Resort & Spa" width="135" height="90">
               </a>
             </div>
+
             <div class="hotels-short-info">
               <h3>
-                <a class="hotels-link" href="#">Amara Resort & Spa</a>
+                <a class="hotel-link" href="#">Amara Resort & Spa</a>
               </h3>
-              <span class="hotels-type">Гостиница</span>
-              <span class="hotels-price">от 4000 р.</span>
-              <a class="hotels-seemore-button" href="#">Подробнее</a>
-              <a class="hotels-book-button" href="#">Забронировать</a>
+
+              <div class="hotels-type-price">
+                <span class="hotels-type">Гостиница</span>
+                <span class="hotels-price">от 4000 р.</span>
+              </div>
+
+              <div class="hotels-buttons">
+                <a class="hotels-seemore-button" href="#">Подробнее</a>
+                <a class="hotels-book-button" href="#">Забронировать</a>
+              </div>
+
             </div>
+
             <div class="hotels-rank">
               <div class="stars" style="width: 80%"></div>
               <span class="hotels-rank-text">Рейтинг: 8,5</span>
@@ -144,17 +164,26 @@
 
           <li class="hotels-list-element">
             <div class="hotels-pic">
-              <a href="#"><img src="img/desert-quail-inn.jpg" alt="Desert Quail Inn" width="140" height="90"></a>
+              <a href="#"><img src="img/desert-quail-inn.jpg" alt="Desert Quail Inn" width="135" height="90"></a>
             </div>
+
             <div class="hotels-short-info">
               <h3>
                 <a class="hotel-link" href="#">Desert Quail Inn</a>
               </h3>
-              <span class="hotels-type">Мотель</span>
-              <span class="hotels-price">от 3000 р.</span>
-              <a class="hotels-seemore-button" href="#">Подробнее</a>
-              <a class="hotels-book-button" href="#">Забронировать</a>
+
+              <div class="hotels-type-price">
+               <span class="hotels-type">Мотель</span>
+               <span class="hotels-price">от 3000 р.</span>
+              </div>
+
+              <div class="hotels-buttons">
+               <a class="hotels-seemore-button" href="#">Подробнее</a>
+               <a class="hotels-book-button" href="#">Забронировать</a>
+             </div>
+
             </div>
+
             <div class="hotels-rank">
               <div class="stars" style="width: 60%"></div>
               <span class="hotels-rank-text">Рейтинг: 8,9</span>
@@ -163,16 +192,22 @@
 
           <li class="hotels-list-element">
             <div class="hotels-pic">
-              <a href="#"><img src="img/poco-diablo.jpg" alt="Villas at Poco Diablo" width="140" height="90"></a>
+              <a href="#"><img src="img/poco-diablo.jpg" alt="Villas at Poco Diablo" width="135" height="90"></a>
             </div>
             <div class="hotels-short-info">
               <h3>
                 <a class="hotel-link" href="#">Villas at Poco Diablo</a>
               </h3>
-              <span class="hotels-type">Апартаменты</span>
-              <span class="hotels-price">от 2000 р.</span>
-              <a class="hotels-seemore-button" href="#">Подробнее</a>
-              <a class="hotels-book-button" href="#">Забронировать</a>
+
+              <div class="hotels-type-price">
+                <span class="hotels-type">Апартаменты</span>
+                <span class="hotels-price">от 2000 р.</span>
+              </div>
+
+              <div class="hotels-buttons">
+                <a class="hotels-seemore-button" href="#">Подробнее</a>
+                <a class="hotels-book-button" href="#">Забронировать</a>
+             </div>
             </div>
             <div class="hotels-rank">
               <div class="stars" style="width: 40%"> </div>
@@ -187,7 +222,7 @@
     <footer class="footer">
       <div class="tel">
         <p>#visitsedona</p>
-        <p>тел: +7(495) 666-02-66</p>
+        <a href="tel:+7(495) 666-02-66">тел: +7(495) 666-02-66</a>
       </div>
       <ul class="social-icons">
         <li><a href="#"><img src="img/twitter.svg" alt="Twitter" width="17" height="15"></a></li>
