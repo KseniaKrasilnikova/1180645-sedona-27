@@ -148,8 +148,7 @@ fieldset {
   font-weight: bold;
   color: #000000;
 
-  margin: 0;
-  padding: 0px 0px 0px 30px;
+  margin-left: 30px;
 }
 
 .hotel-link:hover {
@@ -222,6 +221,7 @@ li.page-current {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
+  height: 100%;
 }
 
 .nav a:hover {
@@ -287,13 +287,13 @@ li.page-current {
 }
 
 .search-form-button,
-.social-icons li,
 .hotels-seemore-button {
   background-color: #81b3d2;
 }
 
 .search-form-button:hover,
-.social-icons li:hover,
+.social-icons:hover,
+.social-icons:focus,
 .hotels-seemore-button:hover {
   background-color: #669ec0;
 }
@@ -325,11 +325,6 @@ li.page-current {
   text-align: center;
   background-color: #f2f2f2;
   border: 0px;
-}
-
-.social-icons li {
-  height: 46px;
-  weight: 48px;
 }
 
 .hotels-filter-text {
@@ -487,12 +482,60 @@ li.page-current {
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  padding-top: 32px;
   align-items: center;
-  /*height: 115px;*/
   position: relative;
-  margin: 0 72px;
+
   background-color: rgb(253, 253, 253, 0.9);
+}
+
+/*.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  align-items: center;
+  position: relative;
+  margin-top: 32px;
+  background-color: rgb(253, 253, 253, 0.9);
+}*/
+
+.footer-social {
+   width: 204px;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding: 0;
+  padding-right: 52px;
+
+  list-style: none;
+}
+
+.social-icons {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #81b3d2;
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  margin-right: 101px;
+  width: 203px;
+}
+.footer-copyright a {
+  padding-top: 4px;
 }
 
 .hotels-filter {
@@ -523,7 +566,7 @@ li.page-current {
 }
 
 .hotels-short-info {
-/*  padding-left: 30px;
+  /*  padding-left: 30px;
   padding-right: 522px;*/
   display: flex;
   flex-direction: column;
@@ -610,27 +653,23 @@ li.page-current {
 }
 
 .map {
-  height: 476px;
+  height: 470px;
   margin-top: 291px;
 }
 
 .main-header {
   background-color: #ffffff;
   height: 56px;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  margin: 0 72px;
 }
 
 .main-header-logo {
   width: 140px;
   height: 72px;
   position: absolute;
-}
-
-.nav {
-  align-self: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .open-form-button {
@@ -654,33 +693,29 @@ li.page-current {
 }
 
 .site-nav {
-  flex-direction: row;
   display: flex;
+  align-items: center;
+  height: 100%;
   margin: 0;
-  width: 1200px;
-  padding: 0;
+  padding: 0 72px 0 71px;
   list-style: none;
 }
 
-.site-nav li {
-  padding-bottom: 16px;
+.site-nav li:first-child {
+  width: 242px;
 }
 
-.site-nav li:first-of-type {
-  padding-left: 75px;
-  padding-right: 140px;
+.site-nav li:nth-child(2) {
+  margin-right: auto;
 }
 
 .site-nav li:nth-child(3) {
-  padding-left: 390px;
-  padding-right: 160px;
+  letter-spacing: 0.4px;
 }
 
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  width: 150px;
-  list-style: none;
+.site-nav li:nth-last-child(1) {
+  width: 241px;
+  text-align: end;
 }
 
 .stars {
@@ -713,6 +748,13 @@ li.page-current {
   font-weight: bold;
   text-align: left;
   width: 227px;
+
+  margin-left: 130px;
+}
+
+.tel p {
+  margin: 0;
+  padding-bottom: 6px;
 }
 
 .welcome {
@@ -737,7 +779,7 @@ li.page-current {
 .check-box {
   position: absolute;
   margin-left: -2.9em;
-  width: 23px;
+  width: 26px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -754,8 +796,8 @@ li.page-current {
 /*  как проверить?
 /*
 .option {
-  display: block;
-  margin-bottom: 0.25px;
+display: block;
+margin-bottom: 0.25px;
 */
 .filter-range {
   width: 330px;
