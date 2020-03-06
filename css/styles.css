@@ -196,6 +196,7 @@ fieldset {
   line-height: 21px;
   font-weight: bold;
   color: #ffffff;
+  background-color: #81b3d2;
 
   padding: 3px 16px;
 }
@@ -263,6 +264,14 @@ fieldset {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.booking-form {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+
+}
+
 .search-form {
   text-align: left;
   font-size: 14px;
@@ -271,20 +280,18 @@ fieldset {
   color: #000000;
   background-color: white;
 
-  width: 568px;
+  width: 456px;
+  padding: 56px;
 
-  /*height: 395px;
-  display: flex;
-  flex-direction: column;
-
-  align-items: stretch;*/
   position: absolute;
-  top: 292px;
+  left: 51%;
+  margin-left: -298px;
 }
 
 .search-form-header-button-text,
 .hotels-book-button {
   background-color: #766357;
+  cursor: pointer;
 }
 
 .search-form-header-button-text:hover,
@@ -297,6 +304,10 @@ fieldset {
   background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
 }
+.search-form-header-button-container {
+  display: flex;
+  justify-content: center;
+}
 
 .search-form-header-button-text {
   font-size: 21px;
@@ -306,10 +317,12 @@ fieldset {
   text-transform: uppercase;
   border: none;
 
-  padding: 32px 139px;
+  padding: 30px 139px;
+  margin: 0 auto;
+  /*transform: translate(56%, 0);*/
 }
 
-.search-form-button-text {
+.search-form-button {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -317,12 +330,9 @@ fieldset {
   text-transform: uppercase;
   border: none;
 
-  margin: 58px 56px;
   padding: 15px 0px;
-}
+  width: 100%;
 
-.search-form-button,
-.hotels-seemore-button {
   background-color: #81b3d2;
 }
 
@@ -339,11 +349,114 @@ fieldset {
   color: #88b6d1;
 }
 
-.search-item input {
+.search-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-item p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+.search-item p:first-child > label {
+  margin-right: 18px;
+}
+
+.search-item p:last-child > label {
+  margin-right: 14px;
+}
+
+/*.date-arrival,
+.date-departure {
+  background-image: url("../img/calendar.svg");
+  background-position:  98% 50%;
+  background-repeat: no-repeat;
+  fill: red;
+}*/
+.date-arrival-calendar {
+  fill: black;
+  opacity: 0.1;
+  position: absolute;
+  left: 85%;
+  top: 16%;
+}
+
+.date-departure-calendar {
+  fill: black;
+  opacity: 0.1;
+  position: absolute;
+  left: 85%;
+  top: 33%;
+}
+
+.date-arrival-calendar:hover,
+.date-departure-calendar:hover {
+  opacity: 1;
+}
+
+.date-arrival-calendar:active,
+.date-departure-calendar:active {
+  fill: #81b3d2;
+  opacity: 1;
+}
+
+.number-adults,
+.number-children {
+  background-image: url("../img/plus.svg");
+  background-position:  88% 50%;
+  background-repeat: no-repeat;
+  fill: rgba(0, 0, 0, 0.1);
+}
+
+.search-item-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+.search-item-number p {
+  margin: 0;
+  width: 50%;
+}
+
+.search-item-number p:last-child {
+  position: relative;
+  left: 50px
+}
+
+.search-item-number p:first-child > label {
+  margin-right: 37px;
+}
+
+.search-item-number p:last-child > label {
+  margin-right: 22px;
+}
+
+.search-item input[type="date"],
+.search-item-number input[type="number"] {
   font: inherit;
+  color: #000000;
+  text-transform: inherit;
   background-color: #f2f2f2;
   border: 0px;
+
+  box-sizing: border-box;
 }
+
+.search-item input[type="date"] {
+  padding: 5px 187px 5px 13px;
+  vertical-align: middle;
+}
+
+.search-item-number input[type="number"] {
+  margin-left: 0px;
+  padding: 5px 0px;
+  vertical-align: middle;
+  width: 50%;
+}
+
 
 .search-item input:hover {
   background-color: #ebebeb;
@@ -506,16 +619,6 @@ fieldset {
   padding: 0px 2px 0px 2px;
 }
 
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  width: 568px;
-  margin: auto;
-  position: absolute;
-  left: 51%;
-  margin-left: -300px;
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -560,17 +663,6 @@ a.filter-button-current {
   background-color: rgb(253, 253, 253, 0.9);
 }
 
-/*.footer {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding-bottom: 32px;
-align-items: center;
-position: relative;
-margin-top: 32px;
-background-color: rgb(253, 253, 253, 0.9);
-}*/
-
 .footer-social {
   width: 204px;
 }
@@ -614,10 +706,6 @@ background-color: rgb(253, 253, 253, 0.9);
 .footer-copyright a {
   padding-top: 3px;
 }
-
-/*.footer-copyright img:hover {
-fill: #5496bd;
-}*/
 
 .hotels-filter {
   background-image: url("../img/filter-background.jpg");
@@ -729,8 +817,7 @@ fill: #5496bd;
 }
 
 .map {
-  height: 470px;
-  margin-top: 291px;
+  height: 475px;
 }
 
 .main-header {
