@@ -288,6 +288,11 @@ fieldset {
   margin-left: -298px;
 }
 
+.search-form p {
+  display: flex;
+  align-items: center;
+}
+
 .search-form-header-button-text,
 .hotels-book-button {
   background-color: #766357;
@@ -355,8 +360,7 @@ fieldset {
 }
 
 .search-item p {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 32px 0;
 }
 .search-item p:first-child > label {
   margin-right: 18px;
@@ -368,10 +372,10 @@ fieldset {
 
 /*.date-arrival,
 .date-departure {
-  background-image: url("../img/calendar.svg");
-  background-position:  98% 50%;
-  background-repeat: no-repeat;
-  fill: red;
+background-image: url("../img/calendar.svg");
+background-position:  98% 50%;
+background-repeat: no-repeat;
+fill: red;
 }*/
 .date-arrival-calendar {
   fill: black;
@@ -410,20 +414,12 @@ fieldset {
 
 .search-item-number {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin-bottom: 55px;
+  margin-bottom: 57px;
 }
 
 .search-item-number p {
   margin: 0;
   width: 50%;
-}
-
-.search-item-number p:last-child {
-  position: relative;
-  left: 50px
 }
 
 .search-item-number p:first-child > label {
@@ -432,10 +428,11 @@ fieldset {
 
 .search-item-number p:last-child > label {
   margin-right: 22px;
+  margin-left: 51px;
 }
 
-.search-item input[type="date"],
-.search-item-number input[type="number"] {
+.search-item input,
+.search-item-number input {
   font: inherit;
   color: #000000;
   text-transform: inherit;
@@ -445,18 +442,21 @@ fieldset {
   box-sizing: border-box;
 }
 
-.search-item input[type="date"] {
-  padding: 5px 187px 5px 13px;
-  vertical-align: middle;
+.search-form input {
+  flex-grow: 1;
+  padding: 5px 17px;
 }
 
-.search-item-number input[type="number"] {
+.search-item-number input {
   margin-left: 0px;
-  padding: 5px 0px;
-  vertical-align: middle;
+  padding: 4px 0px;
   width: 50%;
 }
 
+.search-item-number span {
+  font-size: 20px;
+  position: absolute;
+}
 
 .search-item input:hover {
   background-color: #ebebeb;
@@ -468,10 +468,7 @@ fieldset {
 }
 
 .search-item-number input {
-  font: inherit;
   text-align: center;
-  background-color: #f2f2f2;
-  border: 0px;
 }
 
 .hotels-filter-text {
