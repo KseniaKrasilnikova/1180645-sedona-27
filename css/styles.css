@@ -16,6 +16,11 @@ a {
   color: #000000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .advantages {
   text-align: center;
   font-size: 14px;
@@ -404,12 +409,24 @@ fill: red;
   opacity: 1;
 }
 
-.number-adults,
+/*.number-adults,
 .number-children {
-  background-image: url("../img/plus.svg");
-  background-position:  88% 50%;
-  background-repeat: no-repeat;
-  fill: rgba(0, 0, 0, 0.1);
+background-image: url("../img/plus.svg");
+background-position:  88% 50%;
+background-repeat: no-repeat;
+fill: rgba(0, 0, 0, 0.1);
+}*/
+.search-input {
+  display: flex;
+}
+.search-input span {
+  color: rgba(0, 0, 0, 0.1);
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  height: 38px;
+  width: 38px;
 }
 
 .search-item-number {
@@ -417,18 +434,14 @@ fill: red;
   margin-bottom: 57px;
 }
 
-.search-item-number p {
-  margin: 0;
+.search-item-number > div {
+  display: flex;
+  justify-content: space-between;
   width: 50%;
 }
 
-.search-item-number p:first-child > label {
-  margin-right: 37px;
-}
-
-.search-item-number p:last-child > label {
-  margin-right: 22px;
-  margin-left: 51px;
+.search-item-number label {
+  align-self: center;
 }
 
 .search-item input,
@@ -448,14 +461,10 @@ fill: red;
 }
 
 .search-item-number input {
+  width: 38px;
   margin-left: 0px;
   padding: 4px 0px;
-  width: 50%;
-}
-
-.search-item-number span {
-  font-size: 20px;
-  position: absolute;
+  text-align: center;
 }
 
 .search-item input:hover {
@@ -465,10 +474,6 @@ fill: red;
 .search-item input:focus {
   background-color: #ffffff;
   border: 2px #e5e5e5;
-}
-
-.search-item-number input {
-  text-align: center;
 }
 
 .hotels-filter-text {
@@ -617,7 +622,7 @@ fill: red;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px -5px #000101;
 }
@@ -815,6 +820,10 @@ a.filter-button-current {
 
 .map {
   height: 475px;
+}
+
+.map-field {
+  width: 100%;
 }
 
 .main-header {
