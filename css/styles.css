@@ -272,7 +272,6 @@ fieldset {
 .booking-form {
   display: flex;
   flex-direction: column;
-
   margin: auto;
 
 }
@@ -367,6 +366,7 @@ fieldset {
 .search-item p {
   margin: 0 0 32px 0;
 }
+
 .search-item p:first-child > label {
   margin-right: 18px;
 }
@@ -375,13 +375,6 @@ fieldset {
   margin-right: 14px;
 }
 
-/*.date-arrival,
-.date-departure {
-background-image: url("../img/calendar.svg");
-background-position:  98% 50%;
-background-repeat: no-repeat;
-fill: red;
-}*/
 .date-arrival-calendar {
   fill: black;
   opacity: 0.1;
@@ -409,39 +402,56 @@ fill: red;
   opacity: 1;
 }
 
-/*.number-adults,
-.number-children {
-background-image: url("../img/plus.svg");
-background-position:  88% 50%;
-background-repeat: no-repeat;
-fill: rgba(0, 0, 0, 0.1);
-}*/
+.minus {
+  background-image: url("../img/minus.png");
+  fill: rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-position: 67% 49%;
+  background-color: #f2f2f2;
+}
+
+.plus {
+  background-image: url("../img/plus.png");
+  fill: rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+  background-position: 55% 49%;
+  background-color: #f2f2f2;
+}
+
 .search-input {
   display: flex;
+  width: 50%;
 }
+
 .search-input span {
-  color: rgba(0, 0, 0, 0.1);
-  background: #f2f2f2;
-  text-align: center;
-  font-size: 30px;
   cursor: pointer;
-  height: 38px;
-  width: 38px;
+  padding: 18px 20px;
 }
 
 .search-item-number {
   display: flex;
-  margin-bottom: 57px;
+  margin-bottom: 53px;
 }
 
 .search-item-number > div {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 50%;
 }
 
+.search-item-number > div:nth-child(2) {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
 .search-item-number label {
+  margin-right: 34px;
+}
+
+.search-item-number label:nth-child(2) {
   align-self: center;
+  margin-right: 26px;
 }
 
 .search-item input,
@@ -451,7 +461,6 @@ fill: rgba(0, 0, 0, 0.1);
   text-transform: inherit;
   background-color: #f2f2f2;
   border: 0px;
-
   box-sizing: border-box;
 }
 
@@ -461,8 +470,7 @@ fill: rgba(0, 0, 0, 0.1);
 }
 
 .search-item-number input {
-  width: 38px;
-  margin-left: 0px;
+  min-width: 38px;
   padding: 4px 0px;
   text-align: center;
 }
