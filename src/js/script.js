@@ -36,7 +36,7 @@ form.addEventListener("submit", function (evt) {
     || !numberAdults.value
     || !numberChildren.value) {
     evt.preventDefault();
-    alert("Нужно заполнить все поля");
+    console.log("Нужно заполнить все поля");
   } else {
     localStorage.setItem("numberAdults", numberAdults.value);
     localStorage.setItem("numberChildren", numberChildren.value);

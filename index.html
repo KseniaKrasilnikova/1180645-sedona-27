@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  <link href="src/css/normalize.min.css" rel="stylesheet">
+  <link href="src/css/styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
   <header class="main-header">
     <a class="main-header-logo">
-      <img src="img/logo-sedona.svg" alt="Логотип" width="140" height="72">
+      <img src="src/img/logo-sedona.svg" alt="Логотип" width="140" height="72">
     </a>
     <nav class="nav">
       <ul class="site-nav base-padding">
@@ -24,7 +25,8 @@
   <main>
     <section class="intro-welcome">
       <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
-      <img class="welcome-text" src="img/intro-welcome.svg" alt="Добро пожаловать в Седону" width="459" height="353">
+      <img class="welcome-text" src="src/img/intro-welcome.svg" alt="Добро пожаловать в Седону" width="459"
+           height="353">
       <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="59" preserveAspectRatio="none" viewBox="0 0 1200 56">
         <path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" fill="#fff"/>
       </svg>
@@ -41,7 +43,7 @@
           <p class="advantages-number">&mdash; №1 &mdash;</p>
           <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
-        <img src="img/sedona-cityview.jpg" alt="Седона" width="800" height="256">
+        <img src="src/img/sedona-cityview.jpg" alt="Седона" width="800" height="256">
       </div>
       <ul class="features primary-features">
         <li>
@@ -80,7 +82,9 @@
         </li>
       </ul>
       <div class="advantages">
-        <img src="img/sedona-mountains.jpg" alt="Седона" width="800" height="256">
+        <div class="advantages-img-container">
+          <img src="src/img/sedona-mountains.jpg" alt="Седона">
+        </div>
         <div class="advantages-text">
           <h3>Там есть<br>Мост дьявола</h3>
           <p class="advantages-number">&mdash; №2 &mdash;</p>
@@ -168,8 +172,8 @@
       </section>
       <h2 class="visually-hidden">Седона на карте</h2>
       <iframe class="map-field"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44047.38962387951!2d-111.81077328792595!3d34.86020167213232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1584270979628!5m2!1sru!2sru"
-        height="593" style="border:0;" allowfullscreen=""></iframe>
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44047.38962387951!2d-111.81077328792595!3d34.86020167213232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1584270979628!5m2!1sru!2sru"
+              height="593" style="border:0;" allowfullscreen=""></iframe>
     </section>
   </main>
   <footer class="footer">
@@ -179,9 +183,12 @@
     </div>
     <div class="footer-social">
       <ul>
-        <li><a class="social-icons" href="#"><img src="img/twitter.svg" alt="Twitter" width="17" height="15"></a></li>
-        <li><a class="social-icons" href="#"><img src="img/fb-icon.svg" alt="Facebook" width="12" height="22"></a></li>
-        <li><a class="social-icons" href="#"><img src="img/youtube.svg" alt="Youtube" width="20" height="16"></a></li>
+        <li><a class="social-icons" href="#"><img src="src/img/twitter.svg" alt="Twitter" width="17" height="15"></a>
+        </li>
+        <li><a class="social-icons" href="#"><img src="src/img/fb-icon.svg" alt="Facebook" width="12" height="22"></a>
+        </li>
+        <li><a class="social-icons" href="#"><img src="src/img/youtube.svg" alt="Youtube" width="20" height="16"></a>
+        </li>
       </ul>
     </div>
     <div class="footer-copyright">
@@ -197,7 +204,7 @@
       </a>
     </div>
   </footer>
-  <script src="js/script.min.js" type="text/javascript"></script>
 </div>
+<script src="src/js/script.min.js" type="text/javascript"></script>
 </body>
 </html>
