@@ -24,7 +24,7 @@ if (isStorageSupport) {
   numberChildren.value = numberChildrenStorage;
 }
 
-link.addEventListener("click", function(evt) {
+link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.toggle("form-hide");
   dateArrival.focus();
@@ -36,6 +36,9 @@ form.addEventListener("submit", function (evt) {
     || !numberAdults.value
     || !numberChildren.value) {
     evt.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
     console.log("Нужно заполнить все поля");
   } else {
     localStorage.setItem("numberAdults", numberAdults.value);
