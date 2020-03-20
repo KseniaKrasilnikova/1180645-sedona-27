@@ -118,13 +118,8 @@ a {
 }
 
 .primary-features h3 {
-  padding-top: 27px;
+  padding-top: 23px;
   padding-bottom: 24px;
-}
-
-.primary-features li:last-child h3 {
-  padding-top: 7px;
-  padding-bottom: 9px;
 }
 
 ul.secondary-features > li {
