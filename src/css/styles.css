@@ -58,7 +58,7 @@ a {
   width: 160px;
 }
 
-.advantages. > img {
+.advantages > img {
   height: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -122,13 +122,14 @@ a {
   padding-bottom: 24px;
 }
 
-ul.secondary-features > li {
+.secondary-features li {
   background-color: #eeeeee;
   padding: 47px 56px 58px 55px;
 }
 
-.secondary-features li p:nth-child(3) {
-  margin-top: 7px;
+.secondary-features p {
+  margin: 0;
+  margin-top: 17px;
 }
 
 .secondary-features h3 {
@@ -325,6 +326,7 @@ ul.secondary-features > li {
   padding: 56px;
 
   position: absolute;
+  z-index: 999;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -413,14 +415,6 @@ ul.secondary-features > li {
 
 .search-item p {
   margin: 0 0 32px 0;
-}
-
-.search-item p:first-child label {
-  margin-right: 22px;
-}
-
-.search-item p:last-child label {
-  margin-right: 19px;
 }
 
 .search-form input {
@@ -535,12 +529,20 @@ ul.secondary-features > li {
   width: 50%;
 }
 
-.search-item-number label {
+.search-item-right {
+   margin-right: 25px;
+ }
+
+.search-item-left {
   margin-right: 40px;
 }
 
-.search-item-number > div:nth-child(2) label {
-  margin-right: 26px;
+.search-item-margin-arrival {
+  margin-right: 22px;
+}
+
+.search-item-margin-departure {
+  margin-right: 18px;
 }
 
 .search-item input,
@@ -673,7 +675,7 @@ ul.secondary-features > li {
   text-decoration: none;
 }
 
-.sort-by-param a.sort-by-current {
+a.sort-by-current {
   color: #81b3d2;
   text-decoration: none;
   opacity: 1;
@@ -795,7 +797,7 @@ ul.secondary-features > li {
   -ms-flex-pack: justify;
   justify-content: space-between;
 
-  padding: 15px 0 12px 0;
+  padding: 15px 0 15px 0;
 }
 
 .sub-container {
@@ -856,7 +858,7 @@ ul.secondary-features > li {
   flex-direction: row;
 
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px 72px;
+  padding: 31px 72px;
 }
 
 .hotels-list ul {
@@ -872,7 +874,7 @@ ul.secondary-features > li {
   vertical-align: top;
 }
 
-.hotels-list-element > a > img {
+.hotels-list-img {
   display: block;
 }
 
@@ -945,7 +947,13 @@ ul.secondary-features > li {
 }
 
 .map-field {
+  position: absolute;
   width: 100%;
+}
+
+.map-picture {
+  display: block;
+  margin: 0 auto;
 }
 
 .main-header {
@@ -1043,7 +1051,7 @@ ul.site-nav {
   padding: 15px 0;
 }
 
-.site-nav a.current {
+a.current {
   color: #766357;
 }
 
@@ -1107,7 +1115,7 @@ ul.site-nav {
 
 .welcome-text {
   padding-top: 76px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 
 .check-input {
@@ -1326,9 +1334,11 @@ a.filter-button-current {
   justify-content: space-between;
 
   flex-wrap: wrap;
-  padding: 62px 55px 82px 54px;
 }
 
+.primary-features li {
+  padding: 62px 55px 82px 54px;
+}
 .hotels-filter-text li {
   padding-bottom: 25px;
 }
