@@ -46,4 +46,4 @@ form.addEventListener("submit", function (evt) {
   }
 });
 
-
+document.querySelector(".map-picture").classList.add("map-pic-hidden");

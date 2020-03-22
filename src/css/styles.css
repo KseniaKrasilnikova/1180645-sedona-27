@@ -947,13 +947,16 @@ a.sort-by-current {
 }
 
 .map-field {
-  position: absolute;
   width: 100%;
 }
 
 .map-picture {
   display: block;
   margin: 0 auto;
+}
+
+.map-pic-hidden {
+  display: none;
 }
 
 .main-header {
