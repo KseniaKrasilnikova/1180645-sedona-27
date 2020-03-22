@@ -947,12 +947,14 @@ a.sort-by-current {
 }
 
 .map-field {
+  position: absolute;
   width: 100%;
 }
 
 .map-picture {
   display: block;
   margin: 0 auto;
+  position: absolute;
 }
 
 .map-pic-hidden {
